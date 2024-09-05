@@ -33,7 +33,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_gravity="end"
-            android:onClick="newNote" />
+            android:onClick="newTire" />
     </androidx.appcompat.widget.Toolbar>
 
     <ListView

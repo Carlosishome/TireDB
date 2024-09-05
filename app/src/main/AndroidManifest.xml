@@ -20,7 +20,7 @@
 
         <!-- This is your NoteDetailActivity used for adding or editing notes -->
         <activity
-            android:name=".NoteDetailActivity"
+            android:name=".TireDetailActivity"
             android:exported="false" />
 
     </application>

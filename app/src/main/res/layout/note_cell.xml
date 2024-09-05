@@ -3,26 +3,83 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:padding="15dp"
-    android:layout_height="100dp">
+    android:layout_height="wrap_content">
 
+    <!-- Tire Size (Title) -->
     <TextView
-        android:id="@+id/cellTitle"
+        android:id="@+id/cellTireSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
+        android:text="Tire Size"
         android:textStyle="bold"
         android:maxLines="1"
         android:textColor="@color/darkGray"
         android:textSize="25sp"/>
 
+    <!-- DOT -->
     <TextView
-        android:id="@+id/cellDesc"
+        android:id="@+id/cellDot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Description"
+        android:text="DOT"
         android:maxLines="1"
         android:layout_marginTop="5dp"
         android:textColor="@color/darkGray"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
+
+    <!-- Tread Life Percentage -->
+    <TextView
+        android:id="@+id/cellTreadLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tread Life"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/darkGray"
+        android:textSize="18sp"/>
+
+    <!-- Brand -->
+    <TextView
+        android:id="@+id/cellBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brand"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/darkGray"
+        android:textSize="18sp"/>
+
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/cellQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/darkGray"
+        android:textSize="18sp"/>
+
+    <!-- Holes or Patches -->
+    <TextView
+        android:id="@+id/cellPatches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patches/Holes"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/darkGray"
+        android:textSize="18sp"/>
+
+    <!-- Location -->
+    <TextView
+        android:id="@+id/cellLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/darkGray"
+        android:textSize="18sp"/>
 
 </LinearLayout>

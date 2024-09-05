@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <!-- Tire Size (Editable) -->
+    <EditText
+        android:id="@+id/tireSizeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tire Size"
+        android:textSize="18sp" />
+
+    <!-- DOT (Editable) -->
+    <EditText
+        android:id="@+id/dotEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DOT"
+        android:textSize="18sp" />
+
+    <!-- Tread Life Percentage (Editable) -->
+    <EditText
+        android:id="@+id/treadLifeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tread Life (%)"
+        android:inputType="number"
+        android:textSize="18sp" />
+
+    <!-- Brand (Editable) -->
+    <EditText
+        android:id="@+id/brandEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Brand"
+        android:textSize="18sp" />
+
+    <!-- Quantity (Editable) -->
+    <EditText
+        android:id="@+id/quantityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number"
+        android:textSize="18sp" />
+
+    <!-- Holes or Patches (Editable) -->
+    <EditText
+        android:id="@+id/patchesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Patches or Holes"
+        android:textSize="18sp" />
+
+    <!-- Location (Editable) -->
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location"
+        android:textSize="18sp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveTireButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Tire"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="saveTire" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/deleteTireButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Tire"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_red_dark" />
+
+</LinearLayout>

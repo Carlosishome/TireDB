@@ -7,59 +7,58 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
-
 class MainActivity : AppCompatActivity() {
-    private var noteListView: ListView? = null
+    private var tireListView: ListView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initWidgets()
         loadFromDBToMemory()
-        setNoteAdapter()
+        setTireAdapter()
         setOnClickListener()
     }
 
-
     private fun initWidgets() {
-        noteListView = findViewById(R.id.noteListView)
+        tireListView = findViewById(R.id.noteListView)
     }
 
     private fun loadFromDBToMemory() {
         val sqLiteManager = SQLiteManager.instanceOfDatabase(this)
-        sqLiteManager.populateNoteListArray()
+        sqLiteManager.populateTireListArray()
     }
 
-    private fun setNoteAdapter() {
-        val noteAdapter = NoteAdapter(applicationContext, Note.nonDeletedNotes())
-        noteListView!!.adapter = noteAdapter
+    private fun setTireAdapter() {
+        val tireAdapter = TireAdapter(
+            applicationContext,
+            Tire.nonDeletedTires()
+        )
+        tireListView!!.adapter = tireAdapter
     }
-
 
     private fun setOnClickListener() {
-        noteListView!!.onItemClickListener =
+        tireListView!!.onItemClickListener =
             OnItemClickListener { adapterView, view, position, l ->
-                val selectedNote = noteListView!!.getItemAtPosition(position) as Note
-                val editNoteIntent = Intent(
+                val selectedTire = tireListView!!.getItemAtPosition(position) as Tire
+                val editTireIntent = Intent(
                     applicationContext,
-                    NoteDetailActivity::class.java
+                    TireDetailActivity::class.java
                 )
-                editNoteIntent.putExtra(Note.NOTE_EDIT_EXTRA, selectedNote.id)
-                startActivity(editNoteIntent)
+                editTireIntent.putExtra(Tire.TIRE_EDIT_EXTRA, selectedTire.id)
+                startActivity(editTireIntent)
             }
     }
 
-
-    fun newNote(view: View?) {
-        val newNoteIntent = Intent(
+    fun newTire(view: View?) {
+        val newTireIntent = Intent(
             this,
-            NoteDetailActivity::class.java
+            TireDetailActivity::class.java
         )
-        startActivity(newNoteIntent)
+        startActivity(newTireIntent)
     }
 
     override fun onResume() {
         super.onResume()
-        setNoteAdapter()
+        setTireAdapter()
     }
 }
