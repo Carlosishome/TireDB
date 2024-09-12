@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private fun setTireAdapter() {
         val tireAdapter = TireAdapter(
             applicationContext,
-            Tire.nonDeletedTires()
+            Tire.nonDeletedTires()  // Only non-deleted tires are shown
         )
         tireListView!!.adapter = tireAdapter
     }

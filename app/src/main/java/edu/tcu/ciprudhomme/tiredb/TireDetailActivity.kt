@@ -48,7 +48,7 @@ class TireDetailActivity : AppCompatActivity() {
             treadLifeEditText!!.setText(selectedTire!!.treadLife.toString())
             brandEditText!!.setText(selectedTire!!.brand)
             quantityEditText!!.setText(selectedTire!!.quantity.toString())
-      //      patchesEditText!!.setText(if (selectedTire!!.hasPatches) "Yes" else "No")
+            //      patchesEditText!!.setText(if (selectedTire!!.hasPatches) "Yes" else "No")
             locationEditText!!.setText(selectedTire!!.location)
         } else {
             deleteButton!!.visibility = View.INVISIBLE
@@ -84,7 +84,7 @@ class TireDetailActivity : AppCompatActivity() {
             selectedTire!!.treadLife = treadLife
             selectedTire!!.brand = brand
             selectedTire!!.quantity = quantity
-          //  selectedTire!!.hasPatches = hasPatches
+            //  selectedTire!!.hasPatches = hasPatches
             selectedTire!!.location = location
             sqLiteManager.updateTireInDB(selectedTire)
         }
@@ -94,10 +94,11 @@ class TireDetailActivity : AppCompatActivity() {
 
     fun deleteTire(view: View?) {
         if (selectedTire != null) {
-            selectedTire!!.deleted = Date()
+            selectedTire!!.deleted = Date()  // Mark the tire as deleted
             val sqLiteManager = SQLiteManager.instanceOfDatabase(this)
-            sqLiteManager.updateTireInDB(selectedTire)
-            finish()
+            sqLiteManager.updateTireInDB(selectedTire)  // Update the DB
+            Toast.makeText(this, "Tire deleted successfully", Toast.LENGTH_SHORT).show()
+            finish()  // Close the activity
         }
     }
 }
